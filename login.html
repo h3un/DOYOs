@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="참 잘했어요! 잘했도요.">
+    <meta name="keywords" content="도전,챌린지,도전모임,결심,목표,동기부여,노력,새해목표,올해목표,새해맞이">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumHarABeoJiEuiNaNum.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="login.css">
+
+    <title>잘했도요</title>
+    <link rel="icon" href="icon/favicon.ico">
+</head>
+
+<body>
+    <section class="view">
+        <div id="header"></div>
+            <div class="contents-wrap">
+                <div class="login">
+                    <h1>로그인</h1>
+                    <!-- 사용자명 입력 -->
+                    <div class="login-form id-box">
+                        <label class="login-form-box"><i class="bi bi-person"></i></label>
+                        <input type="text" id="userid" name="userid" required placeholder="아이디">
+                        <div class="login-form-btn id-del dp-none" role="button"><i class="bi bi-x-circle-fill"></i>
+                        </div>
+                    </div>
+                    <!-- 비밀번호 입력 -->
+                    <div class="login-form pw-box">
+                        <label class="login-form-box"><i class="bi bi-lock"></i></label>
+                        <input type="password" id="password" name="password" required placeholder="비밀번호">
+                        <div class="login-form-btn pw-del" role="button"><i class="bi bi-eye"></i></div>
+                    </div>
+                    <!-- 로그인 버튼 -->
+                    <button type="submit" class="form-btn">로그인</button>
+                    <div class="login-form-signup-bar">
+                        <ul class="ul-dp-flex">
+                            <li><a href="1.2_find-id.html">아이디 찾기</a></li>
+                            <li class="thorn"></li>
+                            <li><a href="1.2.1_find-pw.html">비밀번호 찾기</a></li>
+                            <li class="thorn"></li>
+                            <li><a href="sign-up.html">회원가입</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script>
+            $(function () {
+      $("#header").load("header.html");
+    });
+    
+        $(document).ready(function () {
+            // 아이디 입력란 입력 이벤트
+            $('#userid').on('input', function () {
+                // 아이디 입력값이 있으면 삭제 버튼 표시
+                if ($(this).val().trim() !== '') {
+                    $('.id-del').removeClass('dp-none').addClass('dp-flex');
+                } else {
+                    // 아이디 입력값이 없으면 삭제 버튼 숨김
+                    $('.id-del').removeClass('dp-flex').addClass('dp-none');
+                }
+            });
+
+            // 아이디 삭제 버튼 클릭 이벤트
+            $('.id-del').on('click', function () {
+                // 아이디 입력값 지우기
+                $('#userid').val('');
+                // 아이디 삭제 버튼 숨김
+                $(this).removeClass('dp-flex').addClass('dp-none');
+            });
+        });
+
+
+        // 비밀번호 표시/숨기기 버튼 클릭 이벤트
+        $('.pw-del').on('click', function () {
+            var passwordInput = $('#password');
+            var passwordFieldType = passwordInput.attr('type');
+
+            // 비밀번호 숨기기일 때
+            if (passwordFieldType === 'password') {
+                passwordInput.attr('type', 'text');
+                $(this).find('i').removeClass('bi-eye').addClass('bi-eye-slash');
+            }
+            // 비밀번호 보이기일 때
+            else {
+                passwordInput.attr('type', 'password');
+                $(this).find('i').removeClass('bi-eye-slash').addClass('bi-eye');
+            }
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

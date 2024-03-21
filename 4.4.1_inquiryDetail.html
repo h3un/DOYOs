@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="참 잘했어요! 잘했도요.">
+    <meta name="keywords" content="도전,챌린지,도전모임,결심,목표,동기부여,노력,새해목표,올해목표,새해맞이">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/confetti.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumHarABeoJiEuiNaNum.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="inquiryDetail.css">
+
+    <title>내 문의 상세</title>
+    <link rel="icon" href="../icon/favicon.ico">
+</head>
+
+<body>
+    <section class="view">
+        <div id="header"></div>
+        <section>
+            <div class="contents-wrap">
+                <div class="ask-wrap">
+                    <h1>내 문의 상세</h1>
+
+                    <div class="ask-box">
+                        <div class="askbox-text"><span>재 첼린지 외 거절됫나요?</span>
+                            <div class="formattedDate">2024-01-01 15:01</div>
+                        </div>
+                        <div class="ask-ing">진행중</div>
+                    </div>
+
+                    <div class="ask-reply">
+                        <i class="bi bi-question-circle-fill"></i>
+                        <div class="my-ask que">안녕하새요. 첼린지에 참여헷는데요 똑바루 인증도 햇는데 외 거절이 됫나요???? 이유도 이시ㅏㅇ하게 적혀잇고 공지엔 일롱머스크가
+                            화성간다고 연락해라 그러고.. 근데 일@론 머스크한태 연락은 어떡해 하죠?</div>
+                        <i class="bi bi-exclamation-circle-fill"></i>
+                        <div class="my-ask reply">안녕하세요! 좋은 습관 만들기, 잘했도요 입니다.<br>우선 이용에 불편을 드려 죄송합니다.<br><br>사기는 아니고
+                            참여하신 챌린지 확인 시<br>유저 챌린지로 인증을 당사에서 진행하지 않습니다.<br>정확한 챌린지명과 인증일을 적어서 재문의 바랍니다.<br><br>일론 머스크한테
+                            연락하시려면 아래 번호로 하시면 됩니다.<br>화성 갈끄니까~ - 일론 머스크<br><br>
+                            SpaceX<br>
+                            Rocket Road<br>
+                            CA 90250 HAWTHORNE, CALIFORNIA,<br>États-Unis<br>
+                            +1 310-363-6000<br><br>감사합니다.</div>
+                    </div>
+
+                    <button id="ask-back" onclick="goBack()">목록 보기</button>
+                </div>
+
+
+            </div>
+        </section>
+
+    </section>
+
+
+    <script>
+        $(function () {
+            $("#header").load("./header.html");
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>
